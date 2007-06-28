@@ -8,6 +8,7 @@ License:	GPL
 Group:		X11/Applications
 URL:		http://hotwire-shell.org/
 BuildRequires:	python-devel
+BuildRequires:	unzip
 Requires:	python-dbus
 Requires:	python-gnome-desktop
 Requires:	python-gnome-vfs
