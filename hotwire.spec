@@ -1,13 +1,13 @@
 Summary:	Hotwire Shell
 Summary(pl.UTF-8):	Powłoka Hotwire
 Name:		hotwire
-Version:	0.567
+Version:	0.599
 Release:	1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://hotwire-shell.org/download/%{name}-%{version}.zip
-# Source0-md5:	ced9b7a2ab9a0c40ed62c014d953b286
-URL:		http://hotwire-shell.org/
+Source0:	http://hotwire-shell.googlecode.com/files/%{name}-%{version}.zip
+# Source0-md5:	a437de8589239d9a89df601d4cfe02cd
+URL:		http://code.google.com/p/hotwire-shell/
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
@@ -44,6 +44,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc COPYING README
+%attr(755,root,root) %{_bindir}/hotwire-editor
 %attr(755,root,root) %{_bindir}/hotwire
 %{py_sitescriptdir}/hotwire-*.egg-info
 %dir %{py_sitescriptdir}/hotwire
@@ -63,5 +64,8 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{py_sitescriptdir}/hotwire_ui
 %{py_sitescriptdir}/hotwire_ui/*.py[co]
 %dir %{py_sitescriptdir}/hotwire_ui/renderers
+%{py_sitescriptdir}/hotwire/pycompat/*.py[co]
+%dir %{py_sitescriptdir}/hotwire/pycompat
 %{py_sitescriptdir}/hotwire_ui/renderers/*.py[co]
 %{_desktopdir}/hotwire.desktop
+%{_iconsdir}/hicolor/24x24/apps/hotwire.png
