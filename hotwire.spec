@@ -2,7 +2,7 @@ Summary:	Hotwire Shell
 Summary(pl.UTF-8):	Powłoka Hotwire
 Name:		hotwire
 Version:	0.599
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://hotwire-shell.googlecode.com/files/%{name}-%{version}.zip
@@ -40,6 +40,12 @@ python setup.py install --root=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+%update_icon_cache hicolor
+
+%postun
+%update_icon_cache hicolor
 
 %files
 %defattr(644,root,root,755)
