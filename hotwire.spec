@@ -10,8 +10,10 @@ Source0:	http://hotwire-shell.googlecode.com/files/%{name}-%{version}.zip
 URL:		http://code.google.com/p/hotwire-shell/
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.219
+BuildRequires:	rpmbuild(macros) >= 1.311
 BuildRequires:	unzip
+Requires(post,postun):	gtk+2
+Requires(post,postun):	hicolor-icon-theme
 Requires:	python-dbus
 Requires:	python-gnome-desktop
 Requires:	python-gnome-vfs
