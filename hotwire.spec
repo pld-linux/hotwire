@@ -1,12 +1,12 @@
 Summary:	Hotwire Shell
 Summary(pl.UTF-8):	Powłoka Hotwire
 Name:		hotwire
-Version:	0.599
-Release:	2
+Version:	0.700
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://hotwire-shell.googlecode.com/files/%{name}-%{version}.zip
-# Source0-md5:	a437de8589239d9a89df601d4cfe02cd
+# Source0-md5:	51620a43d855934fd3da73cd4a7bafb5
 URL:		http://code.google.com/p/hotwire-shell/
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
@@ -53,12 +53,29 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc COPYING README
 %attr(755,root,root) %{_bindir}/hotwire-editor
+%attr(755,root,root) %{_bindir}/hotwire-gedit-blocking
+%attr(755,root,root) %{_bindir}/hotwire-runtty
+%attr(755,root,root) %{_bindir}/hotwire-ssh
+%attr(755,root,root) %{_bindir}/hotwire-sudo
 %attr(755,root,root) %{_bindir}/hotwire
+%{_datadir}/hotwire
 %{py_sitescriptdir}/hotwire-*.egg-info
+%dir %{py_sitescriptdir}/hotapps
+%{py_sitescriptdir}/hotapps/*.py[co]
+%dir %{py_sitescriptdir}/hotapps/hotssh
+%{py_sitescriptdir}/hotapps/hotssh/*.py[co]
+%dir %{py_sitescriptdir}/hotapps/hotsudo
+%{py_sitescriptdir}/hotapps/hotsudo/*.py[co]
+%dir %{py_sitescriptdir}/hotvte
+%{py_sitescriptdir}/hotvte/*.py[co]
 %dir %{py_sitescriptdir}/hotwire
 %{py_sitescriptdir}/hotwire/*.py[co]
 %dir %{py_sitescriptdir}/hotwire/builtins
 %{py_sitescriptdir}/hotwire/builtins/*.py[co]
+%dir %{py_sitescriptdir}/hotwire/externals
+%{py_sitescriptdir}/hotwire/externals/*.py[co]
+%dir %{py_sitescriptdir}/hotwire/externals/dispatch
+%{py_sitescriptdir}/hotwire/externals/dispatch/*.py[co]
 %dir %{py_sitescriptdir}/hotwire/sysdep
 %{py_sitescriptdir}/hotwire/sysdep/*.py[co]
 %dir %{py_sitescriptdir}/hotwire/sysdep/fs_impl
@@ -71,9 +88,11 @@ rm -rf $RPM_BUILD_ROOT
 %{py_sitescriptdir}/hotwire/sysdep/term_impl/*.py[co]
 %dir %{py_sitescriptdir}/hotwire_ui
 %{py_sitescriptdir}/hotwire_ui/*.py[co]
+%dir %{py_sitescriptdir}/hotwire_ui/adaptors
+%{py_sitescriptdir}/hotwire_ui/adaptors/*.py[co]
 %dir %{py_sitescriptdir}/hotwire_ui/renderers
-%{py_sitescriptdir}/hotwire/pycompat/*.py[co]
-%dir %{py_sitescriptdir}/hotwire/pycompat
 %{py_sitescriptdir}/hotwire_ui/renderers/*.py[co]
 %{_desktopdir}/hotwire.desktop
+%{_iconsdir}/hicolor/24x24/apps/hotwire-openssh.png
+%{_iconsdir}/hicolor/24x24/apps/hotwire-sudo.png
 %{_iconsdir}/hicolor/24x24/apps/hotwire.png
