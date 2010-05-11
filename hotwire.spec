@@ -2,11 +2,12 @@ Summary:	Hotwire Shell
 Summary(pl.UTF-8):	Powłoka Hotwire
 Name:		hotwire
 Version:	0.721
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Applications
 Source0:	http://hotwire-shell.googlecode.com/files/%{name}-%{version}.zip
 # Source0-md5:	501fbe8c270b8931bc423eced9af2be6
+Patch0:		%{name}-desktop.patch
 URL:		http://code.google.com/p/hotwire-shell/
 BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
@@ -31,6 +32,7 @@ administratorów systemów.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 python setup.py build

@@ -1,0 +1,9 @@
+--- hotwire-0.721/hotwire.desktop~	2007-08-16 21:59:26.000000000 +0200
++++ hotwire-0.721/hotwire.desktop	2010-05-11 22:29:56.398931621 +0200
+@@ -7,5 +7,5 @@
+ Terminal=false
+ Type=Application
+ Icon=hotwire
+-Categories=GNOME;GTK;Utility;TerminalEmulator;System;
++Categories=GNOME;GTK;Utility;TerminalEmulator;
+ StartupNotify=true
