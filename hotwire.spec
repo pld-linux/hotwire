@@ -2,7 +2,7 @@ Summary:	Hotwire Shell
 Summary(pl.UTF-8):	Powłoka Hotwire
 Name:		hotwire
 Version:	0.721
-Release:	5
+Release:	6
 License:	GPL
 Group:		X11/Applications
 Source0:	http://hotwire-shell.googlecode.com/files/%{name}-%{version}.zip
@@ -13,7 +13,7 @@ BuildRequires:	python-devel >= 1:2.5
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.311
 BuildRequires:	unzip
-Requires(post,postun):	gtk+2
+Requires(post,postun):	gtk-update-icon-cache
 Requires(post,postun):	hicolor-icon-theme
 Requires:	python-dbus
 Requires:	python-gnome-desktop
